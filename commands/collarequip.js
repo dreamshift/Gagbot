@@ -7,8 +7,10 @@ const { getPronouns } = require('./../functions/pronounfunctions.js')
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('collarequip')
-		.setDescription(`Put chastity, mittens or heavy bondage on someone with a collar`)
+		//.setName('collarequip')
+        .setName('equip')
+		//.setDescription(`Put chastity, mittens or heavy bondage on someone with a collar`)
+        .setDescription(`Put chastity, mittens or heavy bondage on anyone`)
         .addSubcommand((subcommand) => 
             subcommand.setName('mittens')
                 .setDescription('Apply Mittens...')
@@ -56,10 +58,17 @@ module.exports = {
         }
         else if (collareduser == interaction.user) {
             // Don't be cheeky. 
-            interaction.reply({ content: `You can't do anything with your own collar!\n-# Don't be cheeky.`, flags: MessageFlags.Ephemeral })
+            interaction.reply({ content: `You can't use /equip to apply things to yourself!\nrun the command again without equip to apply to yourself,\ni.e. /mitten, /heavy, /chastity`, flags: MessageFlags.Ephemeral })
         }
-		else if (getCollar(collareduser.id)) {
-            if ((getCollar(collareduser.id).keyholder == interaction.user) || (!getCollar(collareduser.id).keyholder_only)) {
+        //dreamshift changes, for their private server
+		//else if (getCollar(collareduser.id)) {
+        //skip checking if someone's wearing a collar, effectively meaning any user can put anything on any other user using /collarequip
+        //the people in dreamshift's private server want this change
+        else if (true) {
+  
+            //if ((getCollar(collareduser.id).keyholder == interaction.user) || (!getCollar(collareduser.id).keyholder_only)) {
+            //skip checking if you have the key to someone's collar, so that every collar is free use!
+            if (true) {
                 // Either we're a keyholder or it's a free user collar. 
                 if (actiontotake == "mittens") {
                     if (getMitten(collareduser)) {
@@ -97,11 +106,13 @@ module.exports = {
             }
             else {
                 // We don't have permission to play with that collar.
+                //because the keyholder check is skipped, this should never occur.
                 interaction.reply({ content: `You don't have the key to ${collareduser}'s collar!`, flags: MessageFlags.Ephemeral })
             }
         }
         else {
             // They aren't wearing a collar.
+            //because the collar wearing check is skipped, this should never occur.
             interaction.reply({ content: `${collareduser} is not wearing a collar!`, flags: MessageFlags.Ephemeral })
         }
     }
