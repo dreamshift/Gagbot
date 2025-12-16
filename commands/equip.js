@@ -54,7 +54,7 @@ module.exports = {
         let heavybondagetype = interaction.options.getString('type')
         let keyholderuser = interaction.options.getUser('keyholder') ? interaction.options.getUser('keyholder') : interaction.user
 		if (getHeavy(interaction.user.id)) {
-			interaction.reply(`${interaction.user} tugs against ${getPronouns(interaction.user.id, "possessiveDeterminer")} ${getHeavy(interaction.user.id).type}, trying to get ${getPronouns(interaction.user.id, "possessiveDeterminer")} hands on ${collareduser}'s collar, but ${getPronouns(collareduser.id, "subject")} can't reach it!`)
+			interaction.reply(`${interaction.user} tugs against ${getPronouns(interaction.user.id, "possessiveDeterminer")} ${getHeavy(interaction.user.id).type}, trying to get ${getPronouns(interaction.user.id, "possessiveDeterminer")} hands on ${collareduser} to force bondage onto ${getPronouns(collareduser.id, "object")}, but ${interaction.user}'s too stuck to get anything done!`)
         }
         else if (collareduser == interaction.user) {
             // Don't be cheeky. 
