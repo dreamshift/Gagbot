@@ -3,17 +3,21 @@ const path = require('path');
 const https = require('https');
 
 const heavytypes = [
-    { name: "Latex Armbinder", value: "armbinder_latex" },
-    { name: "Wolfbinder", value: "armbinder_wolf" },
-    { name: "Ancient Armbinder", value: "armbinder_ancient" },
-    { name: "High Security Armbinder", value: "armbinder_secure" },
+    { name: "Slime Boxbinder", value: "boxbinder_slime" },    
+    { name: "Slime Catsuit", value: "catsuit_slime" },
+    { name: "Slime Encasement", value: "encasement_slime" },    
+
+    { name: "Sticky Rubber Boxbinder", value: "boxbinder_rubber" },    
+    { name: "Sticky Rubber Catsuit", value: "catsuit_rubber" },
+    { name: "Sticky Rubber Encasement", value: "encasement_rubber" },    
+
     { name: "Latex Boxbinder", value: "boxbinder_latex" },
-    { name: "Comfy Straitjacket", value: "straitjacket_comfy" },
-    { name: "Maid Punishment Straitjacket", value: "straitjacket_maid" },
-    { name: "Doll Straitjacket", value: "straitjacket_doll" },
-    { name: "Black Hole Boxbinder", value: "boxbinder_blackhole" },
-    { name: "Shadow Latex Petsuit", value: "petsuit_shadowlatex" },
-    { name: "Bast Petsuit", value: "petsuit_bast" },
+    { name: "Latex Catsuit", value: "catsuit_latex" },
+    { name: "Latex Encasement", value: "encasement_latex" },    
+
+    { name: "Resin Boxbinder", value: "boxbinder_resin" },
+    { name: "Resin Catsuit", value: "catsuit_resin" },
+    { name: "Resin Encasement", value: "encasement_resin" },    
 ];
 
 const convertheavy = (type) => {
