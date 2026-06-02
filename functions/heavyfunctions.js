@@ -125,7 +125,7 @@ const heavytypes = [
 	{ name: "Autotape Wrapping", value: "autotape_wrap", denialCoefficient: 2, heavytags: ["arms", "legs"] },
 	{ name: "Slime Coating", value: "encasement_slime", tags: ["slime"], denialCoefficient: 2, heavytags: ["arms", "legs"] },
 	{ name: "Living Latex Puddle", value: "puddle_latex", tags: ["latex"], denialCoefficient: 3, heavytags: ["arms", "legs"] },               
-	{ name: "Solidified Rubber Coating", value: "encasement_slime", tags: ["slime"], denialCoefficient: 3, heavytags: ["arms", "legs"] },
+	{ name: "Solidified Rubber Coating", value: "encasement_solidified_rubber", tags: ["slime"], denialCoefficient: 3, heavytags: ["arms", "legs"] },
 	{ name: "Crystalline Pillar", value: "encasement_crystal", denialCoefficient: 4, heavytags: ["arms", "legs"] },
 	{ name: "Latex Ball", value: "sphere_latex", tags: ["latex"], denialCoefficient: 3.5, heavytags: ["arms", "legs"] },
 	{ name: "Latex Sleepsack", value: "sleepsack_latex", tags: ["latex"], denialCoefficient: 4, heavytags: ["arms", "legs"] },

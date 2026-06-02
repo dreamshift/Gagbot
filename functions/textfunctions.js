@@ -1165,7 +1165,8 @@ const texts_heavy = {
                         only: (t) => {
                             return t.c3.startsWith("Engulfed");
                         },
-                        text: `USER_TAG creeps towards TARGET_TAG and swallows TARGET_THEM in a pool of slime!`,
+                        text: `USER_TAG creeps towards TARGET_TAG and pounces on TARGET_THEM, wrapping around TARGET_THEM and pulling TARGET_THEM inside!`,
+                        // UNIQUE
                     },
 					{
                         only: (t) => {
@@ -1620,6 +1621,13 @@ const texts_struggle = {
 			},
 			text: `USER_TAG wiggles a little bit in VAR_C1, but a stern look quickly keeps USER_THEM in check.`,
 		},
+        {
+            only: (t) => {
+                 return t.c1.startsWith("Engulfed");
+            },
+            text: `USER_TAG struggles inside of USER_THEIR slimy captor, but no matter how hard USER_THEY twistUSER_S and squirmUSER_S, the slime is too thick and sticky to escape!`,
+            // UNIQUE
+        },
         {
 			only: (t) => {
 				return t.c1.endsWith("Sphere");
